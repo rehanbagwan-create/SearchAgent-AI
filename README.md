@@ -1,46 +1,58 @@
-# 🤖 GenAI Q&A Assistant
+# 🤖 SearchAgent AI
 
-An AI-powered Question & Answer chatbot built using Python, LangChain, Google Gemini, and Streamlit.
+An AI-powered web search assistant built with **Python, LangChain, Groq, Google Serper, LangGraph, and Streamlit**.
 
-## 🌐 Live Demo
+SearchAgent AI can answer questions using an LLM and perform Google searches when current or up-to-date information is required.
 
-👉 https://genai-question-answering.streamlit.app/
+## 🚀 Live Demo
 
-## 💻 GitHub Repository
-
-👉 https://github.com/rehanbagwan-create/GenAI-Question-Answering-
+🔗 https://searchagent-rehan.streamlit.app/
 
 ## ✨ Features
 
 - 🤖 AI-powered question answering
-- 💬 Interactive chat interface
-- 🧠 Powered by Google Gemini
-- 🔗 Built with LangChain
-- 🎨 Streamlit web interface
-- 🗑️ Clear chat functionality
-- 🌐 Deployed as a live web application
+- 🌐 Google Search integration
+- ⚡ Streaming AI responses
+- 🧠 Conversation history
+- 🔗 LangChain agent architecture
+- 🚀 Groq-powered LLM
+- 💻 Interactive Streamlit interface
+- 🔐 Secure API key management using environment variables and Streamlit Secrets
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- Python
-- LangChain
-- Google Gemini
-- Streamlit
-- python-dotenv
-- Git & GitHub
+| Technology | Purpose |
+|---|---|
+| Python | Application development |
+| LangChain | LLM and agent framework |
+| LangGraph | Agent state and memory |
+| Groq | LLM inference |
+| Google Serper | Web search |
+| Streamlit | Web interface |
+| python-dotenv | Environment configuration |
 
-## 📁 Project Structure
+## 🏗️ Architecture
 
 ```text
-GenAI-Question-Answering-
-│
-├── apps/
-│   └── 1_qna_bot.py
-│
-├── notebooks/
-│   ├── 1_basic_langchain_with_openai.ipynb
-│   └── 2_prompt_cains.ipynb
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
+                    User
+                     │
+                     ▼
+              Streamlit UI
+                     │
+                     ▼
+             LangChain Agent
+                     │
+              ┌──────┴──────┐
+              │             │
+              ▼             ▼
+           Groq LLM    Google Search
+              │             │
+              └──────┬──────┘
+                     ▼
+              Process Results
+                     │
+                     ▼
+            Streaming Response
+                     │
+                     ▼
+                   User
