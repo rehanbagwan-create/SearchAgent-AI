@@ -26,7 +26,9 @@ print(st.session_state.memory)
 
 ### Buliding Web Interface
 
-st.subheader("QuickAnswer - Answers at the speed of thought")
+st.subheader("🤖 SearchAgent AI")
+st.caption("AI-powered answers with real-time web search")
+
 for message in st.session_state.history :
     role = message ["role"]
     content = message ["content"]
@@ -56,5 +58,4 @@ if query:
             space.write (message)
 
         st.session_state.history.append({"role": "ai" , "content": message})
-
 
